@@ -1,8 +1,27 @@
-<DOCTYPE html>
+<!DOCTYPE html>
+<html>
   <head>
-    <title>Justin Wu Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Webpage</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   
   <body>
-    <h1>Justin Wu</h1>
+    <ul id ="todos"></ul>
+    <form>
+      <input name="todo" type="text"/> 
+      <input type="submit" value="Add Todo" />
+    </form>
+  
+    <script>
+      const form = document.querySelector("form");
+      const input = document.querySelector("[name='todo']");
+      const todoList = document.getElementById("todos");
+  
+      const existingTodos = JSON.parse(localStorage.getItem("todos")) || [];
+      const todoData = [];
+    </script>
   </body>
+
+</html>
